@@ -8,6 +8,8 @@ Muse::Application.configure do
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3030 }
 
+  #for paperclip gem needs reference to imagemagick
+  Paperclip.options[:command_path] = "/opt/ImageMagick/bin/convert"
 
   # Do not eager load code on boot.
   config.eager_load = false
